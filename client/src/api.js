@@ -1,4 +1,4 @@
-const BASE = 'http://localhost:3001';
+const BASE = import.meta.env.PROD ? '' : 'http://localhost:3001';
 
 export const getDecks = () => fetch(`${BASE}/decks`).then(r => r.json());
 export const createDeck = (name) => fetch(`${BASE}/decks`, {
