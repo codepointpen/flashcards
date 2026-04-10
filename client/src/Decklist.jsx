@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getDecks, createDeck, deleteDeck } from './api';
-import './DeckList.css';
+import './Decklist.css';
 
 export default function DeckList({ onSelectDeck }) {
   const [decks, setDecks] = useState([]);
