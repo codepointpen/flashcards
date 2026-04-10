@@ -1,0 +1,210 @@
+.study {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.study__loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: var(--font-display);
+  font-size: 32px;
+}
+
+.study__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.study__back {
+  background: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  transition: color 0.2s;
+}
+
+.study__back:hover { color: var(--accent); }
+
+.study__progress-label {
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--muted);
+}
+
+.study__progress {
+  height: 3px;
+  background: var(--light-gray);
+  margin-bottom: 48px;
+}
+
+.study__progress-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.study__stage {
+  perspective: 1200px;
+  margin-bottom: 40px;
+}
+
+.study__card {
+  width: 100%;
+  min-height: 320px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.study__card--flipped { transform: rotateY(180deg); }
+
+.study__card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.study__card-front,
+.study__card-back {
+  position: absolute;
+  inset: 0;
+  min-height: 320px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  border: 2px solid var(--black);
+}
+
+.study__card-front { background: var(--white); }
+
+.study__card-back {
+  background: var(--black);
+  color: var(--white);
+  transform: rotateY(180deg);
+}
+
+.study__card-label {
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.study__card-text {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 5vw, 48px);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.study__card-hint {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.3;
+  margin-top: 24px;
+}
+
+.study__confidence {
+  animation: fadeUp 0.3s ease forwards;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.study__confidence-label {
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.study__confidence-btns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+}
+
+.study__conf-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 8px;
+  font-size: 13px;
+  transition: transform 0.15s, opacity 0.15s;
+  border: 2px solid transparent;
+}
+
+.study__conf-btn:hover { transform: translateY(-2px); }
+
+.study__conf-num {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.study__conf-name {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.study__conf-btn--1 { background: #1a1a1a; color: #fff; }
+.study__conf-btn--2 { background: #3d2020; color: #ff8080; }
+.study__conf-btn--3 { background: #2d2a1a; color: #ffd080; }
+.study__conf-btn--4 { background: #1a2d1a; color: #80dd80; }
+.study__conf-btn--5 { background: var(--accent); color: #fff; }
+
+.study__done {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.study__done-inner { text-align: center; }
+
+.study__done-title {
+  font-family: var(--font-display);
+  font-size: clamp(80px, 18vw, 160px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -4px;
+}
+
+.study__done-sub {
+  color: var(--muted);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 16px 0 40px;
+}
+
+.study__done-btn {
+  background: var(--black);
+  color: var(--white);
+  padding: 16px 32px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: background 0.2s;
+}
+
+.study__done-btn:hover { background: var(--accent); }
