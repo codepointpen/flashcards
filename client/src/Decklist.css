@@ -1,0 +1,107 @@
+.decklist {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px;
+}
+
+.decklist__header {
+  margin-bottom: 48px;
+  border-bottom: 3px solid var(--black);
+  padding-bottom: 24px;
+}
+
+.decklist__title {
+  font-family: var(--font-display);
+  font-size: clamp(64px, 12vw, 120px);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.decklist__sub {
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.decklist__form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.decklist__input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid var(--black);
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.decklist__input:focus { border-color: var(--accent); }
+
+.decklist__add-btn {
+  width: 52px;
+  background: var(--black);
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 300;
+  transition: background 0.2s;
+}
+
+.decklist__add-btn:hover { background: var(--accent); }
+
+.decklist__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2px;
+}
+
+.deck-card {
+  background: var(--black);
+  color: var(--white);
+  padding: 28px 24px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.deck-card:hover { background: var(--accent); }
+
+.deck-card__num {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.4;
+}
+
+.deck-card__name {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 12px;
+}
+
+.deck-card__delete {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  color: var(--white);
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  padding: 4px 8px;
+}
+
+.deck-card:hover .deck-card__delete { opacity: 1; }
+.decklist__empty { color: var(--muted); font-size: 15px; }
