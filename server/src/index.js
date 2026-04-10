@@ -3,7 +3,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
-app.listen(express.json());
+app.use(express.json());
 
 app.get('/ping', (req, res) => {
   res.json({ message: 'Flashcard server is alive!' });
