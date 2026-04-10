@@ -1,14 +1,14 @@
 .editor {
-  max-width: 800px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 48px 24px;
+  padding: 48px 32px;
 }
 
 .editor__topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .editor__back {
@@ -16,17 +16,19 @@
   font-size: 14px;
   letter-spacing: 1px;
   color: var(--muted);
+  font-family: var(--font-body);
   transition: color 0.2s;
 }
 
 .editor__back:hover { color: var(--accent); }
 
 .editor__study-btn {
-  background: var(--black);
-  color: var(--white);
-  padding: 12px 24px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 11px 22px;
   font-size: 14px;
-  letter-spacing: 1px;
+  border-radius: 8px;
+  font-family: var(--font-body);
   font-weight: 500;
   transition: background 0.2s;
 }
@@ -35,11 +37,11 @@
 
 .editor__title {
   font-family: var(--font-display);
-  font-size: clamp(40px, 8vw, 72px);
-  font-weight: 800;
-  line-height: 1;
+  font-size: clamp(36px, 7vw, 64px);
+  font-weight: 400;
   letter-spacing: -1px;
-  margin-bottom: 8px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
 }
 
 .editor__count {
@@ -47,82 +49,94 @@
   font-size: 13px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .editor__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px;
+  gap: 10px;
   margin-bottom: 48px;
+  padding: 24px;
+  background: #fafafa;
+  border-radius: 12px;
+  border: 1.5px solid #eee;
 }
 
 .editor__textarea {
-  padding: 14px 18px;
-  border: 2px solid var(--black);
-  background: transparent;
-  font-size: 15px;
+  padding: 12px 14px;
+  border: 1.5px solid #e0e0e0;
+  background: #fff;
+  font-size: 14px;
   resize: none;
+  border-radius: 8px;
   outline: none;
+  font-family: var(--font-body);
   transition: border-color 0.2s;
+  color: #1a1a1a;
 }
 
 .editor__textarea:focus { border-color: var(--accent); }
 
 .editor__add-btn {
   grid-column: 1 / -1;
-  background: var(--black);
-  color: var(--white);
-  padding: 16px;
-  font-size: 15px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 14px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  letter-spacing: 0.5px;
   transition: background 0.2s;
 }
 
 .editor__add-btn:hover { background: var(--accent); }
 
-.editor__list { display: flex; flex-direction: column; gap: 2px; }
+.editor__list { display: flex; flex-direction: column; gap: 8px; }
 
 .editor__card {
   display: flex;
   align-items: center;
-  gap: 20px;
-  background: var(--light-gray);
-  padding: 20px 24px;
-  transition: background 0.2s;
+  gap: 16px;
+  background: #fff;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  padding: 16px 20px;
+  transition: border-color 0.2s;
 }
 
-.editor__card:hover { background: #ddd9d2; }
+.editor__card:hover { border-color: #ddd; }
 
 .editor__card-num {
-  font-family: var(--font-display);
   font-size: 12px;
   letter-spacing: 2px;
-  color: var(--muted);
-  min-width: 28px;
+  color: #ccc;
+  min-width: 24px;
 }
 
-.editor__card-content { flex: 1; display: flex; gap: 32px; }
+.editor__card-content { flex: 1; display: flex; gap: 24px; }
 
 .editor__card-front {
   flex: 1;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
+  color: #1a1a1a;
 }
 
 .editor__card-back {
   flex: 1;
-  font-size: 15px;
+  font-size: 14px;
   color: var(--muted);
 }
 
 .editor__card-delete {
   background: none;
-  color: var(--muted);
-  font-size: 14px;
+  color: #ddd;
+  font-size: 13px;
   transition: color 0.2s;
-  padding: 4px 8px;
+  padding: 4px 6px;
+  font-family: var(--font-body);
 }
 
 .editor__card-delete:hover { color: var(--accent); }
