@@ -4,9 +4,7 @@
   padding: 64px 32px;
 }
 
-.decklist__header {
-  margin-bottom: 48px;
-}
+.decklist__header { margin-bottom: 48px; }
 
 .decklist__title {
   font-family: var(--font-display);
@@ -40,7 +38,6 @@
   border-radius: 8px;
   outline: none;
   transition: border-color 0.2s;
-  font-family: var(--font-body);
 }
 
 .decklist__input:focus { border-color: var(--accent); }
@@ -82,11 +79,7 @@
   box-shadow: 0 4px 16px rgba(255, 92, 0, 0.08);
 }
 
-.deck-card__num {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: #bbb;
-}
+.deck-card__num { font-size: 12px; letter-spacing: 2px; color: #bbb; }
 
 .deck-card__name {
   font-family: var(--font-display);
@@ -111,9 +104,4 @@
 
 .deck-card:hover .deck-card__delete { opacity: 1; }
 .deck-card__delete:hover { color: var(--accent); }
-
-.decklist__empty {
-  color: var(--muted);
-  font-size: 15px;
-  grid-column: 1 / -1;
-}
+.decklist__empty { color: var(--muted); font-size: 15px; grid-column: 1 / -1; }

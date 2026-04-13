@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
 import { getDecks, createDeck, deleteDeck } from './api';
-import './Decklist.css';
+import './DeckList.css';
 
 export default function DeckList({ onSelectDeck }) {
   const [decks, setDecks] = useState([]);
   const [newName, setNewName] = useState('');
 
-  useEffect(() => {
-    getDecks().then(setDecks);
-  }, []);
+  useEffect(() => { getDecks().then(setDecks); }, []);
 
   const handleCreate = async () => {
     if (!newName.trim()) return;
@@ -26,7 +24,7 @@ export default function DeckList({ onSelectDeck }) {
   return (
     <div className="decklist">
       <header className="decklist__header">
-        <h1 className="decklist__title">FLASH<br />CARDS</h1>
+        <h1 className="decklist__title">Flash<br />Cards</h1>
         <p className="decklist__sub">Your decks</p>
       </header>
 

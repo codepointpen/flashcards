@@ -7,9 +7,7 @@ export default function CardEditor({ deck, onBack, onStudy }) {
   const [front, setFront] = useState('');
   const [back, setBack] = useState('');
 
-  useEffect(() => {
-    getCards(deck.id).then(setCards);
-  }, [deck.id]);
+  useEffect(() => { getCards(deck.id).then(setCards); }, [deck.id]);
 
   const handleAdd = async () => {
     if (!front.trim() || !back.trim()) return;
@@ -29,9 +27,7 @@ export default function CardEditor({ deck, onBack, onStudy }) {
       <div className="editor__topbar">
         <button className="editor__back" onClick={onBack}>← All decks</button>
         {cards.length > 0 && (
-          <button className="editor__study-btn" onClick={onStudy}>
-            Study now →
-          </button>
+          <button className="editor__study-btn" onClick={onStudy}>Study now →</button>
         )}
       </div>
 
