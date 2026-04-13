@@ -18,6 +18,7 @@ export default function CardEditor({ deck, onBack, onStudy }) {
   };
 
   const handleDelete = async (id) => {
+    if (!window.confirm('Delete this card?')) return;
     await deleteCard(id);
     setCards(prev => prev.filter(c => c.id !== id));
   };

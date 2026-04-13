@@ -17,6 +17,7 @@ export default function DeckList({ onSelectDeck }) {
 
   const handleDelete = async (e, id) => {
     e.stopPropagation();
+    if (!window.confirm('Delete this deck? This cannot be undone.')) return;
     await deleteDeck(id);
     setDecks(prev => prev.filter(d => d.id !== id));
   };
